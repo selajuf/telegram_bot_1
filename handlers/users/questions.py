@@ -241,8 +241,8 @@ async def Q34(message: types.Message, state: FSMContext):
     await state.finish()
 
 
-def register_handlers_client(dp: Dispatcher):
-    dp.register_message_handler(Q1, commands='start', state=None)
+def register_handlers_users(dp: Dispatcher):
+    dp.register_message_handler(Q1, commands='questions', state=None)
     dp.register_message_handler(Q2, state=FSM.Question_1)
     dp.register_message_handler(Q3, state=FSM.Question_2)
     dp.register_message_handler(Q4, state=FSM.Question_3)
